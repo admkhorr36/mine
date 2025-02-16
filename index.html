@@ -1,7 +1,10 @@
 <!DOCTYPE html>  <html lang="en">    <head>    
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>shaw.io\mine</title> 
+    <footer class="footer">
+    &copy; 2025 Crown technology like Website. All rights reserved.
+</footer>
+    <title>Crown tech</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <!-- Boxicons -->    
@@ -30,14 +33,21 @@ transition: back.
 }
         
     .logo {
-      font-size: 30px;
+      font-size: 15px;
       font-weight: bold;
     }
     .actions i {
-      font-size: 30px;
+      font-size: 28px;
       cursor: pointer;
       margin-left: 0px;
       transition: color 0.3s ease;
+}
+
+/* Instagram-Style Name */
+.insta-name {
+font-size: 32px;
+font-weight: bold;
+font-family: 'Billabong', cursive;
 }
 .social-icons a {
         display: flex;
@@ -54,33 +64,31 @@ transition: back.
                           linear-gradient(to right, #6a11cb, #2575fc);
         background-origin: border-box;
         background-clip: content-box, border-box;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: none;
     }
 
     .social-icons a:hover {
         transform: scale(1.1);		
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        
     }
-        .social-icons {
+
+    .social-icons {
          display: flex;
-         justify-content: flex-start; /* Left side alignment */
+         justify-content: flex-start;
          align-items: center;
          gap: 24px;
-         margin: 100px 0 0 20px; /* Adjust margin for left spacing */
-
-        }
+         margin: 100px 0 0 20px;
+    }
     
-    /* Social Icons Animation (Slower Speed) */
-        .social-icons a:nth-child(1) {
-            animation: slide-left 0.4s ease-in-out;
-        }
-        .social-icons a:nth-child(2) {
-            animation: slide-left 0.8s ease-in-out;
-        }
-        .social-icons a:nth-child(3) {
-            animation: slide-left 0.8s ease-in-out;
-        }
+    .social-icons a:nth-child(1) {
+        animation: slide-left 0.4s ease-in-out;
+    }
+    .social-icons a:nth-child(2) {
+        animation: slide-left 0.8s ease-in-out;
+    }
+    .social-icons a:nth-child(3) {
+        animation: slide-left 0.8s ease-in-out;
+    }
     
     .social-icons a i {
         font-size: 32px;
@@ -88,23 +96,20 @@ transition: back.
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+/* Dark mode par social icons ke andar background khatam */
+body.dark-mode .social-icons a {
+    background: transparent;
+    border: 2px solid #00f; /* Gradient border maintained */
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.5); /* Optional glow */
+}
+
+body.dark-mode .social-icons a i {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
     
-/* Instagram-Style Name */
-.insta-name {
-font-size: 32px;
-font-weight: bold;
-font-family: 'Billabong', cursive;
-}
-
-.dark-red {
-color: #8B0000; /* Full dark red */
-}
-
-.black {
-color: black;
-
-}
-
 /* Dark Mode */
 
 body.dark-mode {
@@ -114,6 +119,32 @@ color: white;
 }
 .header .logo {
 animation: slide-left 0.7s ease-out;
+}
+    /* Hero text colors based on dark mode */
+.hero-text {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.hero-text span.aadam {
+  color: #000000; /* Default black when dark mode is off */
+  transition: color 0.3s ease;
+}
+
+.hero-text span.here {
+  color: white; /* Default white for dark •" */
+  transition: color 0.3s ease;
+}
+    
+body.dark-mode .hero-text span.here {
+  color: #ffffff; /* White in dark mode */
+}
+.dark-red {
+color: #8B0000; /* Full dark red */
+}
+
+.black {
+color: black;
 }
 
 /* Side Menu */
@@ -219,7 +250,22 @@ position: none;
     transform: scale(1.03);
     transition: all 0.3s ease-in-out; /* Smooth transition effect */
 }
+    .hero-text {
+  font-size: 32px;
+  font-weight: bold;
+  animation: slide-down 0.8s ease-in-out;
+}
 
+@keyframes slide-down {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes moon-slide {
     from {
         transform: translateX(50px);
@@ -260,23 +306,13 @@ position: none;
     to {  
         transform: translateY(0);  
         opacity: 1;  
-    }  
-}  
-
-@keyframes slide-down {  
-    from {  
-        transform: translateY(-100px);  
-        opacity: 0;  
-    }  
-    to {  
-        transform: translateY(0);  
-        opacity: 1; }
     }
-</style>
+}
+    </style>
 </head>
 <body>
 <body><!-- Header --><div class="header">    
-    <div class="logo">   ̠̹           legendShaw  </div>    
+    <div class="logo">   ̠̹          Crown t-Pvt.Ltd </div>    
     <div class="actions">    
         <i class='bx bxs-moon mode-toggle'></i>    
         <i class='bx bx-menu menu-toggle'></i>    
@@ -298,7 +334,7 @@ position: none;
     <a href="https://www.facebook.com/adamkhorr.1"><i class='bx bxl-facebook-circle'></i></a>    
 </div><!-- Hero Section --><div class="hero">    
     <h1 class="insta-name">    
-        <span class="dark-red">| Shaw </span> <span class="black">here</span> • </h1>    
+        <span class="dark-red">| Aadam </span> here </span> • </h1>    
         <p>• I'm the best programmer ♨</p>    
         <p>• Hope you are well? Wanna contact me? Click the links above.</p>    
         <p style="white-space: pre-line;"> • Dream in code, live in solutions, and leave behind a legacy of     
@@ -311,6 +347,7 @@ position: none;
                                <div class="btn">
     <button> Contect ♨ </button>
 </div>
+    
     <script>    
     const darkToggle = document.querySelector(".mode-toggle");    
     const body = document.body;    
@@ -513,4 +550,35 @@ body.dark-mode .side-menu ul li:hover {
     background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out; }
+        transition: all 0.3s ease-in-out; 
+    }
+    
+    /* Copyright footer*/
+    .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 12px;
+  box-shadow: all 0.5s ease;
+  font-size: 9px;
+  transition: none;
+  animation: slide-left 1s ease;
+}
+
+body.dark-mode footer {
+  background-color: #000112;
+  box-shadow: none;
+  color: white;
+}
+
+body:not(.dark-mode) footer {
+  box-shadow: none;
+  color: black;
+  font-size: 9px;
+}
+    /* Smooth synchronized transitions for all elements */
+* {
+    transition: all 0.1s ease !important;
+}
